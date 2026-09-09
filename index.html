@@ -1,1 +1,520 @@
+<!DOCTYPE html>
 
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>GridApex – Béta APK</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #050505;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 60px 20px 40px;
+        text-align: center;
+        background:
+            radial-gradient(circle at top, rgba(255, 0, 0, 0.22), transparent 45%),
+            #050505;
+        border-bottom: 2px solid #ff2020;
+    }
+
+    .logo {
+        font-size: 48px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        color: #ff2020;
+        text-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+    }
+
+    .beta {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 5px 14px;
+        border: 1px solid #20ff68;
+        border-radius: 30px;
+        color: #20ff68;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        max-width: 700px;
+        margin: 20px auto 0;
+        color: #cccccc;
+        font-size: 18px;
+    }
+
+    main {
+        width: min(1000px, 92%);
+        margin: 40px auto;
+    }
+
+    .download-box {
+        text-align: center;
+        padding: 40px 25px;
+        margin-bottom: 30px;
+        border: 1px solid #ff2020;
+        border-radius: 18px;
+        background: #0d0d0d;
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.12);
+    }
+
+    .download-box h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+
+    .download-box p {
+        color: #aaa;
+        margin-bottom: 25px;
+    }
+
+    .download-button {
+        display: inline-block;
+        padding: 16px 35px;
+        border-radius: 10px;
+        background: #20ff68;
+        color: #000000;
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 900;
+        transition: 0.2s;
+    }
+
+    .download-button:hover {
+        transform: scale(1.04);
+        box-shadow: 0 0 25px rgba(32, 255, 104, 0.5);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        background: #101010;
+        border-radius: 15px;
+        padding: 25px;
+        border-top: 4px solid #ff2020;
+    }
+
+    .card:nth-child(2) {
+        border-top-color: #20ff68;
+    }
+
+    .card:nth-child(3) {
+        border-top-color: #ffffff;
+    }
+
+    .card h3 {
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+
+    .card p {
+        color: #bdbdbd;
+    }
+
+    .warning {
+        margin: 30px 0;
+        padding: 22px;
+        background: #160909;
+        border-left: 5px solid #ff2020;
+        border-radius: 8px;
+    }
+
+    .warning strong {
+        color: #ff3333;
+    }
+
+    .tutorial {
+        background: #0d0d0d;
+        padding: 35px 30px;
+        border-radius: 18px;
+        border: 1px solid #222;
+    }
+
+    .tutorial h2 {
+        color: #20ff68;
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+
+    .tutorial h3 {
+        color: #ff3333;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .tutorial ol {
+        padding-left: 25px;
+    }
+
+    .tutorial li {
+        margin: 12px 0;
+        color: #d0d0d0;
+    }
+
+    .step {
+        background: #151515;
+        padding: 15px;
+        margin: 12px 0;
+        border-radius: 8px;
+        border-left: 3px solid #20ff68;
+    }
+
+    .android-only {
+        display: none;
+        background: #200707;
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+        min-height: 100vh;
+    }
+
+    .android-only h1 {
+        color: #ff3333;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 35px 20px;
+        color: #777;
+        border-top: 1px solid #222;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 750px) {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .logo {
+            font-size: 38px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Android-only üzenet -->
+<div id="notAndroid" class="android-only">
+    <h1>GridApex – Android alkalmazás</h1>
+    <p>
+        A GridApex béta jelenleg csak Android készülékeken használható.
+    </p>
+    <p style="margin-top:15px;">
+        Kérjük, nyisd meg ezt az oldalt Android telefonon vagy tableten.
+    </p>
+</div>
+
+<!-- Főoldal -->
+<div id="androidContent">
+
+    <header>
+        <div class="logo">GridApex</div>
+        <div class="beta">BÉTA VERZIÓ</div>
+
+        <p class="subtitle">
+            A GridApex hivatalos béta APK-letöltő oldala.
+            Töltsd le Android készülékedre, majd kövesd a telepítési útmutatót.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- LETÖLTÉS -->
+        <section class="download-box">
+
+            <h2>GridApex béta letöltése</h2>
+
+            <p>
+                Androidra készült APK-fájl.
+                A letöltés után kövesd az alábbi telepítési útmutatót.
+            </p>
+
+            <!--
+                AZ APK NEVE:
+                GridApex.apk
+
+                Ha más nevet használsz, ezt a sort módosítsd.
+            -->
+            <a
+                class="download-button"
+                href="./GridApex.apk"
+                download="GridApex.apk">
+                ⬇ GridApex APK letöltése
+            </a>
+
+        </section>
+
+
+        <!-- 3 FONTOS DOLOG -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>🤖 Csak Android</h3>
+                <p>
+                    A GridApex béta jelenleg kizárólag Android
+                    telefonokon és tableteken működik.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔐 Google-bejelentkezés</h3>
+                <p>
+                    A béta verzióban a Google-fiókos bejelentkezés
+                    jelenleg nem működik.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧪 Béta verzió</h3>
+                <p>
+                    Ez egy tesztverzió. Egyes funkciók még fejlesztés
+                    alatt állhatnak, és hibák előfordulhatnak.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- FIGYELMEZTETÉS -->
+        <div class="warning">
+            <strong>⚠ Fontos:</strong>
+            A GridApex APK nem a Google Play Áruházból kerül telepítésre.
+            Az Android ezért biztonsági engedélyt kérhet az ismeretlen
+            forrásból származó alkalmazások telepítéséhez.
+        </div>
+
+
+        <!-- TELEPÍTÉSI TUTORIAL -->
+        <section class="tutorial">
+
+            <h2>📱 GridApex telepítési útmutató</h2>
+
+            <h3>1. Nyisd meg az oldalt Androidon</h3>
+
+            <ol>
+                <li>
+                    Fogd meg az Android telefonodat vagy tabletedet.
+                </li>
+
+                <li>
+                    Nyisd meg rajta a Chrome vagy más böngészőt.
+                </li>
+
+                <li>
+                    Nyisd meg a GridApex letöltőoldalát.
+                </li>
+
+                <li>
+                    Ellenőrizd, hogy a GridApex béta letöltési oldalát látod.
+                </li>
+            </ol>
+
+
+            <h3>2. Töltsd le az APK-t</h3>
+
+            <ol start="5">
+                <li>
+                    Görgess a „GridApex béta letöltése” részhez.
+                </li>
+
+                <li>
+                    Nyomd meg a zöld
+                    „GridApex APK letöltése” gombot.
+                </li>
+
+                <li>
+                    A böngésző elkezdi letölteni a
+                    <strong>GridApex.apk</strong> fájlt.
+                </li>
+
+                <li>
+                    Várd meg, amíg a letöltés teljesen befejeződik.
+                </li>
+            </ol>
+
+
+            <h3>3. Nyisd meg a letöltött APK-t</h3>
+
+            <ol start="9">
+                <li>
+                    Nyisd meg a telefonod „Letöltések”
+                    vagy „Downloads” mappáját.
+                </li>
+
+                <li>
+                    Keresd meg a <strong>GridApex.apk</strong> fájlt.
+                </li>
+
+                <li>
+                    Koppints a GridApex APK-fájlra.
+                </li>
+
+                <li>
+                    Az Android megjelenítheti az alkalmazás telepítési
+                    képernyőjét.
+                </li>
+            </ol>
+
+
+            <h3>4. Engedélyezd a telepítést, ha az Android kéri</h3>
+
+            <ol start="13">
+                <li>
+                    Ha az Android azt írja, hogy az alkalmazás
+                    ismeretlen forrásból származik, ne ijedj meg.
+                </li>
+
+                <li>
+                    Android 8.0 vagy újabb rendszeren az engedélyt
+                    általában annak az alkalmazásnak kell megadni,
+                    amelyből az APK-t megnyitottad, például a böngészőnek.
+                </li>
+
+                <li>
+                    Nyisd meg az Android által felajánlott
+                    „Ismeretlen alkalmazások telepítése”
+                    vagy hasonló beállítást.
+                </li>
+
+                <li>
+                    Engedélyezd az adott forrásból történő telepítést.
+                </li>
+
+                <li>
+                    Menj vissza a GridApex APK telepítési képernyőjére.
+                </li>
+            </ol>
+
+
+            <h3>5. Telepítsd a GridApex bétát</h3>
+
+            <ol start="18">
+                <li>
+                    Nyomd meg a „Telepítés” gombot.
+                </li>
+
+                <li>
+                    Várd meg, amíg az Android befejezi a telepítést.
+                </li>
+
+                <li>
+                    A telepítés után megjelenhet a „Megnyitás” gomb.
+                </li>
+
+                <li>
+                    Nyomd meg a „Megnyitás” gombot, vagy keresd meg
+                    a GridApex ikonját az alkalmazások között.
+                </li>
+            </ol>
+
+
+            <h3>6. Első indítás</h3>
+
+            <ol start="22">
+                <li>
+                    Indítsd el a GridApex alkalmazást.
+                </li>
+
+                <li>
+                    Ellenőrizd, hogy az alkalmazás megfelelően elindul-e.
+                </li>
+
+                <li>
+                    Ne feledd, hogy ez a béta verzió.
+                </li>
+
+                <li>
+                    A Google-fiókos bejelentkezés ebben a béta verzióban
+                    nem működik.
+                </li>
+
+                <li>
+                    Ha egy funkció nem működik megfelelően, az béta
+                    állapot miatt előfordulhat.
+                </li>
+            </ol>
+
+
+            <h3>7. Ha nem tudod telepíteni</h3>
+
+            <ol start="27">
+                <li>
+                    Ellenőrizd, hogy Android készüléket használsz.
+                </li>
+
+                <li>
+                    Ellenőrizd, hogy az APK letöltése teljesen befejeződött.
+                </li>
+
+                <li>
+                    Próbáld újra megnyitni a GridApex.apk fájlt.
+                </li>
+
+                <li>
+                    Ha az Android blokkolja a telepítést, ellenőrizd
+                    az „Ismeretlen alkalmazások telepítése” engedélyt.
+                </li>
+
+                <li>
+                    Ha továbbra sem működik, ellenőrizd, hogy a telefon
+                    kompatibilis-e a GridApex béta verziójával.
+                </li>
+            </ol>
+
+
+            <div class="step">
+                <strong>💡 Tipp:</strong>
+                Az APK-t csak megbízható forrásból telepítsd, és mindig
+                ellenőrizd, hogy valóban a hivatalos GridApex fájlt
+                töltötted-e le.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        © 2026 GridApex • Béta verzió • Csak Android
+    </footer>
+
+</div>
+
+
+<!-- Android ellenőrzés -->
+<script>
+    const isAndroid = /Android/i.test(navigator.userAgent);
+
+    if (!isAndroid) {
+        document.getElementById("androidContent").style.display = "none";
+        document.getElementById("notAndroid").style.display = "block";
+    }
+</script>
+```
+
+</body>
+</html>
